@@ -15,6 +15,18 @@ pip install selenium
 
 Ensure ChromeDriver is available in your system PATH. You can download it from [ChromeDriver documentation](https://chromedriver.chromium.org/).
 
+## Docker
+You can also run the bot inside a Docker container. The provided `Dockerfile` installs
+Google Chrome, ChromeDriver and the required Python packages.
+
+Build the image and run it with your Amazon credentials:
+
+```bash
+docker build -t amazon-bot .
+docker run -e AMAZON_EMAIL="your-email@example.com" \
+           -e AMAZON_PASSWORD="your-password" amazon-bot
+```
+
 ## Usage
 Set your Amazon credentials as environment variables `AMAZON_EMAIL` and `AMAZON_PASSWORD` and run the script:
 
